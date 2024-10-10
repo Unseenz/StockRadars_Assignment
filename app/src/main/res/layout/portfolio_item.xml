@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp">
+
+    <!-- ImageView with margin -->
+    <ImageView
+        android:id="@+id/planImageView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circular_image"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:fontFamily="@font/mitr_light"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@id/changeTextView"
+        app:layout_constraintStart_toEndOf="@id/planImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Pending TextView and Value -->
+    <TextView
+        android:id="@+id/pendingTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Point รอลงทุน"
+        android:fontFamily="@font/mitr_light"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/planImageView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintEnd_toStartOf="@id/pendingValue" />
+
+    <TextView
+        android:id="@+id/pendingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mitr_light"
+        android:text="0.00"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/pendingTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp" />
+
+    <!-- Withdrawable TextView and Value -->
+    <TextView
+        android:id="@+id/withdrawableTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Point ลงทุนแล้ว"
+        android:fontFamily="@font/mitr_light"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@id/planImageView"
+        app:layout_constraintTop_toBottomOf="@id/pendingTextView"
+        app:layout_constraintEnd_toStartOf="@id/withdrawableValue" />
+
+    <TextView
+        android:id="@+id/withdrawableValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:fontFamily="@font/mitr_light"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/withdrawableTextView"
+        app:layout_constraintEnd_toStartOf="@id/changeTextView"
+        android:layout_marginEnd="4dp" />
+
+    <!-- Change TextView aligned to the right -->
+    <TextView
+        android:id="@+id/changeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(0.00)"
+        android:textColor="@android:color/holo_red_dark"
+        android:fontFamily="@font/mitr_light"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/withdrawableTextView"
+        android:layout_marginEnd="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

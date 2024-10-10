@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_portfolio">
+
+    <fragment
+        android:id="@+id/navigation_portfolio"
+        android:name="com.example.stockradars_assignment.ui.portfolio.PortfolioFragment"
+        tools:layout="@layout/fragment_portfolio"/>
+    <fragment
+        android:id="@+id/navigation_indices"
+        android:name="com.example.stockradars_assignment.ui.indices.IndicesFragment"
+        tools:layout="@layout/fragment_indices"/>
+</navigation>

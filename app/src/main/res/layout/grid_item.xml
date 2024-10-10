@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="0.5dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:elevation="2dp">
+
+    <!-- Container for Change and Percent Change with weights -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Change -->
+        <TextView
+            android:id="@+id/textViewChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="Change"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <!-- Percent Change -->
+        <TextView
+            android:id="@+id/textViewPercentChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_marginEnd="5dp"
+            android:text="Percent Change"
+            android:textSize="15sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Short Name -->
+    <TextView
+        android:id="@+id/textViewShortName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Short Name"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>
